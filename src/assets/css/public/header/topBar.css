@@ -1,0 +1,12 @@
+.m-header-topbar {
+  width: 1190px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.m-header-topbar .position,
+.m-header-topbar .el-icon-location,
+.m-header-topbar .changeCity,
+.m-header-topbar .login,
+.m-header-topbar .register {
+  float: left;
+}
