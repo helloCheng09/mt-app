@@ -1,11 +1,11 @@
 <template>
     <div class="layout-default">
         <el-container>
-            <el-header>
+            <el-header height="">
                 <my-header />
             </el-header>
             <el-main>Main</el-main>
-            <el-footer>Footer</el-footer>
+            <el-footer height="">Footer</el-footer>
         </el-container>
     </div>
 </template>
@@ -21,4 +21,7 @@ export default {
 
 <style lang="less">
    @import "../assets/css/public/layout.less";
+   .el-header {
+       padding: 0;
+   }
 </style>

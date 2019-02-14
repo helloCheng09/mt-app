@@ -1,5 +1,6 @@
 
 .m-header-topbar {
+    position: relative;
     width: 1190px;
     height: 40px;
     margin: 0 auto;
@@ -98,9 +99,91 @@
                    width: 120px;
                }
            }
+           .subContainer >dl {
+                display: block;
+            }
+            .subContainer {
+                display: flex;
+                flex-wrap: wrap;
+                .eat-food {
+                    width:156px;
+                    dd {
+                        width: auto;
+                    }
+                }
+                .see-movie {
+                    width: 90px;
+                    dd {
+                        width: auto;
+                    }
+                }
+                dl {
+                    float: left;
+                    width: 234px;
+                    position: relative;
+                    top:0;
+                    margin-right: 47px;
+                }
+                dt {
+                    margin-bottom: 26px;
+                    text-align: center;
+                    font-size: 14px;
+                    color: #31BBAC;
+                }
+                dd {
+                    display: inline-block;
+                    width: 31%;
+                    text-align: center;
+                    
+                }
+               
+                dd a {
+                    height: auto;
+                    padding: 5px 0;
+
+                }
+                .app-show {
+                    float: right;
+                    width: 380px; 
+
+                    dd {
+                        display: inline-block;
+                        width: auto;
+                        margin: 0 6px;
+                        font-size: 0;
+                        a {
+                            display: inline-block;
+                            min-width: auto;
+                            font-size: 0;
+                        }
+                    }
+                 }
+                 .appicon {
+                     display: inline-block;
+                     width: 60px;
+                     height: 60px;
+                 }
+            }
+            .site .subContainer {
+                display: none;
+                position: absolute;
+                top: 28px;
+                left: -1114px;
+                z-index: 9999;
+                width: 1190px;
+                padding: 30px 36px 36px 47px;
+                box-sizing: border-box;
+                background-color: #fff;
+                box-shadow: 0 3px 5px 0 rgba(0,0,0,.1); 
+
+            }
+            
            .list:hover {
-                a{
-                   
+               >a {
+                    background-color: #fff;
+                    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1); 
+               }
+              .shop-center  a, .my-center a{
                     background-color: #fff;
                     box-shadow: 0 3px 5px 0 rgba(0,0,0,.1); 
                 }
@@ -108,7 +191,12 @@
                 >dl {
                     display: block;
                 }
-
+                .subContainer >dl {
+                    display: block;
+                }
+                .subContainer {
+                    display: inline-block;
+                }
            }
         }
     }
