@@ -6,6 +6,11 @@
             <router-link class="changeCity" :to="{name: 'changeCity'}">
                 切换城市
             </router-link>
+            [
+                <a href="">三河</a>
+                <a href="">香河</a>
+                <a href="">廊坊</a>
+            ]
         </div>
         <div class="m-user">
             <router-link class="login"  :to="{name: 'login'}">

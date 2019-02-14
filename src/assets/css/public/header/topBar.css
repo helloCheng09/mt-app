@@ -1,12 +1,101 @@
 .m-header-topbar {
   width: 1190px;
+  height: 40px;
   margin: 0 auto;
+}
+.m-header-topbar .m-geo {
+  padding-top: 12px;
+}
+.m-header-topbar .m-geo .position,
+.m-header-topbar .m-geo .login,
+.m-header-topbar .m-geo .register {
+  float: left;
+  font-size: 12px;
+}
+.m-header-topbar .m-geo .el-icon-location {
+  font-size: 12px;
+}
+.m-header-topbar .m-geo .changeCity {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 0 2px;
+  border-radius: 2px;
+  text-align: center;
+  background: #F4F4F4;
+  border: 1px solid #E5E5E5;
+}
+.m-header-topbar .m-geo .login,
+.m-header-topbar .m-geo .register {
+  margin-left: 14px;
+}
+.m-header-topbar .m-geo .register,
+.m-header-topbar .m-geo .el-icon-location {
+  color: #999;
+}
+.m-header-topbar .m-geo .el-icon-location {
+  padding-top: 3px;
+  margin-right: 4px;
+  color: #666;
+}
+.m-header-topbar .m-geo .position a {
+  color: #666;
+}
+.m-header-topbar .m-geo .position a:hover {
+  color: #31BBAC;
+}
+.m-header-topbar .m-geo .register:hover {
+  color: #31BBAC;
+}
+.m-header-topbar .m-nav {
+  float: right;
+}
+.m-header-topbar .m-nav ul {
+  padding-top: 12px;
+}
+.m-header-topbar .m-nav ul li {
+  position: relative;
+  float: left;
+  font-size: 12px;
+  color: #999;
+}
+.m-header-topbar .m-nav ul li a:hover {
+  color: #31BBAC;
+}
+.m-header-topbar .m-nav ul li a {
+  height: 40px;
+  padding: 12px 14px;
+  border-color: #e5e5e5;
+  box-sizing: border-box;
+  color: #999;
+}
+.m-header-topbar .m-nav ul dl {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  z-index: 9999;
+  display: none;
   background-color: #fff;
 }
-.m-header-topbar .position,
-.m-header-topbar .el-icon-location,
-.m-header-topbar .changeCity,
-.m-header-topbar .login,
-.m-header-topbar .register {
-  float: left;
+.m-header-topbar .m-nav ul dl dd {
+  box-sizing: border-box;
+}
+.m-header-topbar .m-nav ul dl dd a {
+  display: inline-block;
+  min-width: 76px;
+  padding: 12px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.m-header-topbar .m-nav ul .shop-center {
+  left: -44px;
+}
+.m-header-topbar .m-nav ul .shop-center a {
+  width: 120px;
+}
+.m-header-topbar .m-nav ul .list:hover a {
+  background-color: #fff;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.m-header-topbar .m-nav ul .list:hover > dl {
+  display: block;
 }
