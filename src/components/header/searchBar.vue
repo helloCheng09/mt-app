@@ -6,7 +6,7 @@
                     <img src="https://s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/logo.png" alt="">
                 </a>
             </el-col>
-            <el-col :span='15' class="center"> 
+            <el-col :span='15' class="center">
                 <div class="wrapper">
                     <el-input v-model="searchWord" placeholder="搜索商家或地点" @focus="focus" @blur="blur"></el-input>
                     <el-button type="primary" icon="el-icon-search"></el-button>
@@ -22,7 +22,7 @@
                         </dd>
                     </dl>
                 </div>
-                <p class="suggest"> 
+                <p class="suggest">
                     <a href="#" v-for="(item, index) in suggestList" :key="index">{{item}}</a>
                 </p>
             </el-col>
@@ -31,37 +31,37 @@
 </template>
 <script>
 export default {
-    data(){
-        return {
-            searchWord: '',
-            // isHotPlace: true,
-            // isSearchList: true,
-            hotPlaceList: ["京东第一温泉", "度假村7天连锁酒店", "格林豪泰快捷酒店兰庭酒店"], //热门搜索列表
-            searchaList: ["火锅", "火锅底料", "火锅自助"],
-            suggestList:["京东第一温泉", "度假村7天连锁酒店", "格林豪泰快捷酒店兰庭酒店", "99旅馆连锁尚华酒店"],
-            isFous: false,
-        }
+  data() {
+    return {
+      searchWord: '',
+      // isHotPlace: true,
+      // isSearchList: true,
+      hotPlaceList: ['京东第一温泉', '度假村7天连锁酒店', '格林豪泰快捷酒店兰庭酒店'], // 热门搜索列表
+      searchaList: ['火锅', '火锅底料', '火锅自助'],
+      suggestList: ['京东第一温泉', '度假村7天连锁酒店', '格林豪泰快捷酒店兰庭酒店', '99旅馆连锁尚华酒店'],
+      isFous: false,
+    };
+  },
+  computed: {
+    isHotPlace() {
+      return this.isFous && !this.searchWord;
     },
-    computed: {
-        isHotPlace() {
-            return this.isFous && !this.searchWord;
-        },
-        isSearchList() {
-            return this.isFous && this.searchWord;
-        },
+    isSearchList() {
+      return this.isFous && this.searchWord;
     },
-    methods: {
-        focus() {
-            this.isFous = true
-        },
-        blur() {
-            let self = this
-            setTimeout(() => {
-                self.isFous = false
-            }, 500);
-        }
-    }
-}
+  },
+  methods: {
+    focus() {
+      this.isFous = true;
+    },
+    blur() {
+      const self = this;
+      setTimeout(() => {
+        self.isFous = false;
+      }, 500);
+    },
+  },
+};
 </script>
 
 <style lang="less">
@@ -183,7 +183,7 @@ export default {
         .suggest {
                 font-size: 12px;
                 color: #999;
-                a { 
+                a {
                     display: inline-block;
                     padding-top: 8px;
                     padding-left: 12px;

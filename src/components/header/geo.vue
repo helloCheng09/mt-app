@@ -25,6 +25,15 @@
 
 <script>
 export default {
-    
-}
+
+};
 </script>
+
+<style lang="less">
+    .position {
+    }
+    .m-user {
+        padding-top: 2px;
+    }
+</style>
+

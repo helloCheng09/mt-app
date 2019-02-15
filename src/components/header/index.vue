@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <el-row>
-            <top-bar/> 
+            <top-bar/>
         </el-row>
         <el-row>
             <search-bar/>
@@ -9,20 +9,20 @@
     </div>
 </template>
 <script>
-import TopBar from './topBar'
-import SearchBar from './searchBar'
+import TopBar from './topBar';
+import SearchBar from './searchBar';
 
 export default {
-    components: {
-        TopBar,
-        SearchBar
-    }
-}
+  components: {
+    TopBar,
+    SearchBar,
+  },
+};
 </script>
 
 <style lang="less">
     .header {
+        box-shadow: 0 2px 27px rgba(0, 0, 0, 0.1)
     }
 </style>
-
 

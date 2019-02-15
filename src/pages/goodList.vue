@@ -1,10 +1,12 @@
 <template>
-    <div class="page-blank">
-        Blank
+    <div>
+        goods
     </div>
 </template>
+
 <script>
 export default {
-
-};
+    
+}
 </script>
+

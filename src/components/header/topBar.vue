@@ -10,13 +10,14 @@
 </template>
 
 <script>
-import geo from "./geo";
-import MyNav from "./nav";
+import geo from './geo';
+import MyNav from './nav';
+
 export default {
   components: {
     geo,
-    MyNav
-  }
+    MyNav,
+  },
 };
 </script>
 <style lang='less'>
