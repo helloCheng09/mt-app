@@ -1,11 +1,12 @@
 <template>
     <div class="m-menu">
-        <dl>
+        <dl class="nav">
             <dt>全部分类</dt>
             <dd>美食
                 <i class="el-icon-arrow-right"></i>
             </dd>
-            <dd>外卖
+            <dd>
+                外卖
                 <i class="el-icon-arrow-right"></i>
             </dd>
             <dd>酒店
@@ -50,27 +51,79 @@
             <dd>酒吧 / 密室逃脱
                 <i class="el-icon-arrow-right"></i>
             </dd>
+            <div class="detail" >
+                <template>
+                   <h2>美食
+                       <span class="link-more">
+                           <a href="#">更多</a>
+                            <i class="el-icon-arrow-right"></i>
+                       </span>
+                   </h2>
+                   <span>代金券</span>
+                   <span>甜点</span>
+                   <span>火锅</span>
+                   <span>自助餐</span>
+                   <span>小吃</span>
+                   <span>快餐</span>
+                   <span>日韩料理</span>
+                   <span>西餐</span>
+                   <span>聚餐宴请</span>
+                   <span>烧烤</span>
+                   <span>烤肉</span>
+                   <span>东北菜</span>
+                   <span>川湘菜</span>
+                   <span>香锅烤鱼</span>
+                </template>
+                 <template>
+                   <h2>美食
+                       <span class="link-more">
+                           <a href="#">更多</a>
+                            <i class="el-icon-arrow-right"></i>
+                       </span>
+                   </h2>
+                   <span>代金券</span>
+                   <span>甜点</span>
+                   <span>火锅</span>
+                   <span>自助餐</span>
+                   <span>小吃</span>
+                   <span>快餐</span>
+                   <span>日韩料理</span>
+                   <span>西餐</span>
+                   <span>聚餐宴请</span>
+                   <span>烧烤</span>
+                   <span>烤肉</span>
+                   <span>东北菜</span>
+                   <span>川湘菜</span>
+                   <span>香锅烤鱼</span>
+                </template>
+            </div>
+
         </dl>
+        
     </div>
 </template>
 
 <script>
 export default {
-    git 
+
 }
 
 </script>
 
 <style lang="less" scoped>
     .m-menu {
-        background-color: #31BBAC;
+        position: relative;
+        background: linear-gradient(-90deg,rgba(2,181,157,.85) 2%,rgba(22,146,183,.85) 100%);
         dl {
+            position: relative;
+        }
+        .nav {
         }
         dt,dd {
             color: #fff;
         }
         dt {
-            line-height: 3;
+            line-height: 4;
             padding: 0 10px;
         }
         dd {
@@ -85,7 +138,60 @@ export default {
         dd i {
             float: right;
             line-height: 2;
+
+
         }
+        .detail {
+            display: none;
+            position: absolute;
+            left: 248px;
+            top: 64px;
+            width: 400px;
+            height: 448px;
+            padding: 0 40px;
+            z-index: 9999;
+            color: #999;
+            background-color: #fff;
+            h2 {
+                margin-top: 20px;
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 3;
+                border-bottom: 1px solid #ddd;
+                color: #222;
+                .link-more {
+                    float: right;
+                    line-height: 49px;
+                     cursor: pointer;
+                    font-size: 12px;
+                }
+                a {
+                    color: #999;
+                }
+                .link-more:hover {
+                    color: #31BBAC;
+                    a {
+                        color: #31BBAC;
+                    }
+                }
+            }
+            >span {
+                margin-top: 8px;
+                margin-right: 6px;
+                font-size: 12px;
+                cursor: pointer;
+            }
+            span:hover {
+                color: #31BBAC;
+            }
+        }
+        .nav:hover {
+          .detail {
+                display: block!important;
+            }  
+        }
+        
+        
 
     }
 </style>
