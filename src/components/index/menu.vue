@@ -1,12 +1,16 @@
 <template>
     <div class="m-menu">
-        <dl class="nav">
+        <dl class="nav" @mouseleave="menuLeave()">
             <dt>全部分类</dt>
-            <dd>美食
+            <!-- <dd>美食
                 <i class="el-icon-arrow-right"></i>
             </dd>
             <dd>
                 外卖
+                <i class="el-icon-arrow-right"></i>
+            </dd> -->
+            <dd v-for="(item, index) in detailList" :key="index" @mouseenter="showContent(item)" >
+                {{item.title}}
                 <i class="el-icon-arrow-right"></i>
             </dd>
             <dd>酒店
@@ -51,8 +55,18 @@
             <dd>酒吧 / 密室逃脱
                 <i class="el-icon-arrow-right"></i>
             </dd>
-            <div class="detail" >
-                <template>
+            <div class="detail" v-show="contentList">
+                <template v-for="(item2, index2) in contentList" >
+                   <h2 :key="index2">
+                       {{item2.title}}
+                       <span class="link-more">
+                           <a href="#">更多</a>
+                            <i class="el-icon-arrow-right"></i>
+                       </span>
+                   </h2>
+                   <span v-for="(v, i) in item2.content" :key="v + '_' + i">{{v}}</span>
+                </template>
+                 <!-- <template>
                    <h2>美食
                        <span class="link-more">
                            <a href="#">更多</a>
@@ -73,29 +87,7 @@
                    <span>东北菜</span>
                    <span>川湘菜</span>
                    <span>香锅烤鱼</span>
-                </template>
-                 <template>
-                   <h2>美食
-                       <span class="link-more">
-                           <a href="#">更多</a>
-                            <i class="el-icon-arrow-right"></i>
-                       </span>
-                   </h2>
-                   <span>代金券</span>
-                   <span>甜点</span>
-                   <span>火锅</span>
-                   <span>自助餐</span>
-                   <span>小吃</span>
-                   <span>快餐</span>
-                   <span>日韩料理</span>
-                   <span>西餐</span>
-                   <span>聚餐宴请</span>
-                   <span>烧烤</span>
-                   <span>烤肉</span>
-                   <span>东北菜</span>
-                   <span>川湘菜</span>
-                   <span>香锅烤鱼</span>
-                </template>
+                </template> -->
             </div>
 
         </dl>
@@ -105,7 +97,38 @@
 
 <script>
 export default {
-
+    data() {
+        return {
+            detailList:
+                [{
+                    title: '美食 / 吃货',
+                    icon: '',
+                    children: [{
+                        title: '美食',
+                        content:['代金券', '甜点', '火锅', '自助餐']
+                    },{
+                        title: '吃货',
+                        content: ['吃天下', '烤肉', '烧烤', '西餐']
+                    }]
+                },{
+                    title: '外卖',
+                    icon: '',
+                    children:[{
+                        title: '外卖',
+                        content:['美团', '饿了么', '哈哈']
+                    }]
+                }],
+            contentList:[],
+        }
+    },
+    methods: {
+        showContent(item) {
+            this.contentList = item.children
+        },
+        menuLeave() {
+            this.contentList = null
+        }
+    }
 }
 
 </script>
@@ -138,11 +161,9 @@ export default {
         dd i {
             float: right;
             line-height: 2;
-
-
         }
         .detail {
-            display: none;
+            // display: none;
             position: absolute;
             left: 248px;
             top: 64px;
